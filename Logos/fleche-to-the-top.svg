@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 108.1 110.27">
+  <defs>
+    <style>
+       .cls-1 {
+        fill: "currentColor"; /* Appliquez directement la couleur ici */
+        /* stroke: currentColor; */ /* Si vous voulez un contour, activez cette ligne */
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="Calque_1">
+      <g>
+        <path class="cls-1" d="M51.9,20.74v66.24c0,3.22,5,3.22,5,0V20.74c0-3.22-5-3.22-5,0h0Z"/>
+        <path class="cls-1" d="M52.51,18.97c-6.92,8.61-13.84,17.21-20.76,25.82l-2.94,3.66c-.85,1.05-1.03,2.51,0,3.54.88.88,2.69,1.06,3.54,0,6.92-8.61,13.84-17.21,20.76-25.82.98-1.22,1.96-2.44,2.94-3.66.85-1.05,1.03-2.51,0-3.54-.88-.88-2.69-1.06-3.54,0h0Z"/>
+        <path class="cls-1" d="M52.8,22.74c6.92,8.61,13.84,17.21,20.76,25.82.98,1.22,1.96,2.44,2.94,3.66.85,1.05,2.65.88,3.54,0,1.04-1.04.85-2.48,0-3.54-6.92-8.61-13.84-17.21-20.76-25.82-.98-1.22-1.96-2.44-2.94-3.66-.85-1.05-2.65-.88-3.54,0-1.04,1.04-.85,2.48,0,3.54h0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
