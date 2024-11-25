@@ -1,0 +1,292 @@
+*{
+    box-sizing: border-box; /* pour que les padding et margin ne modifient pas la taille de l'élément */
+}
+
+/*Font*/
+.fragment-mono-regular {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+.fragment-mono-regular-bold {
+  font-family: "Fragment Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+    background-color: #debfff;
+    margin: 0; 
+    line-height: 1.5; 
+}
+
+img{
+    max-width: 100%; /* pour que les images ne dépassent pas de leur conteneur */
+    height: auto; /* pour garder le ratio de l'image */
+}
+
+figure{
+    margin: 0; /* pour éviter les marges par défaut du navigateur */
+}
+
+.header{
+  display: grid; /* pour pouvoir utiliser grid-template-columns */
+  grid-template-columns: max-content max-content; /* 2 colonnes de largeur minimale */
+  justify-content: space-between; /* pour espacer les éléments */
+  align-items: center; /* pour centrer verticalement */
+
+  padding:0 24px; 
+  position: sticky; /* pour que le header reste en haut de la page */
+  top:0; /* pour que le header reste en haut de la page */
+  -webkit-backdrop-filter: blur(6px); /* pour flouter le background sur Safari */
+  backdrop-filter: blur(6px); /* pour flouter le background */
+  z-index: 999; /* repeindre */
+}
+
+.header h1{
+  margin: 6px 0; /* pour éviter les marges par défaut du navigateur */
+}
+.header h1:hover{
+  animation: boing 1.5s infinite; /* pour animer le logo en survole */
+}
+
+@keyframes boing {
+  0% { transform: scale(0.9); }
+  30% { transform: scale(1.1); }
+  50% { transform: scale(0.8); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0.9); }
+}
+
+.header-nav{
+  display: grid;
+  grid-template-columns: max-content max-content ;
+  gap:0 24px ;
+ 
+}
+
+.header-nav a{
+  color:#25173b;
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+  background: linear-gradient(90deg,#430871, #e26951, #2adc4d,#410871);
+  background-size: 200px; /* pour définir la largeur du dégradé */
+  -webkit-background-clip: text; /* pour que le dégradé soit visible dans le texte */
+  background-clip: text; /* pour que le dégradé soit visible dans le texte */
+  color: transparent; /* pour que le texte soit transparent */
+  animation: rainbow 1s linear infinite; /* pour animer le dégradé */
+}
+
+@keyframes rainbow {
+  0% { background-position:  0 0; }
+  100% { background-position: -200px 0; }
+}
+
+
+/*Bouton "revenir en haut" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;                 
+  height: 50px;                 
+  opacity: 0;                   
+  pointer-events: none;         
+  transition: opacity 0.3s ease-in-out; 
+  z-index: 100;
+}
+.back-to-top:hover img {
+  filter: brightness(0.7);   
+}
+.back-to-top.visible {
+  opacity: 1;                
+  pointer-events: auto;      
+}
+.back-to-top:hover{
+  animation: boing 1.5s infinite; 
+}
+
+
+.projets{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); /* Ajustement pour plusieurs enfants sur une ligne */
+  margin: 10px; /* Espace entre les éléments */ 
+  /* auto-fit pour que le nombre d'éléments s'adaptent à la largeur du conteneur 
+  320px -> 1 élément
+  480px -> 2 éléments
+  720px -> 3 éléments
+  */
+}
+
+.projet{
+  padding: 0; /* Supprimer le padding */
+  margin: 0; /* Ajouter cette ligne si nécessaire */
+  display: block; /* Changer en block pour éviter l'espace en bas */
+  position: relative; /* Garder pour le positionnement de l'overlay */
+  margin: 7px;
+  font-size: 20px;
+}
+  
+
+
+.projet img{
+  display: block;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+
+
+.all {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Deux colonnes (left et right) */
+  gap: 18px;
+  padding: 18px;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: visible; /* Pour éviter que le contenu soit coupé */
+}
+
+.right {
+  font-family: "Fragment Mono", monospace;
+  max-width: 480px;
+  position: sticky;
+  top: 125px;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+.sticky {
+  position: -webkit-sticky; 
+  position: sticky; 
+  top: 150px; 
+  align-self: start;
+  font-family: "Fragment Mono", monospace;
+}
+
+.left1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.left1 .full-width {
+  width: 100%; /* Première image sur toute la largeur */
+  height: auto;
+}
+
+.left1 .row {
+  display: grid; /* Utilisation de Grid pour la deuxième ligne */
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+  gap: 20px;
+}
+
+.left1 .row img {
+  width: 100%;  /* Les images prennent toute la largeur de leur cellule */
+  height: auto; /* Maintient les proportions */
+}
+
+
+
+
+.left2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.left2 .full-width {
+  width: 100%; /* Première image sur toute la largeur */
+  height: auto;
+}
+
+.left2 .row {
+  display: grid; /* Utilisation de Grid pour la deuxième ligne */
+  grid-template-columns: repeat(2, 1fr); /* Trois colonnes égales */
+  gap: 20px;
+  
+}
+
+.left2 .row img {
+  width: 100%;  /* Les images prennent toute la largeur de leur cellule */
+  height: 100%;
+}
+
+
+
+
+
+
+.projet-xl {
+  grid-row: span 2; /* Cela fait en sorte que l'élément occupe deux lignes */
+  object-fit: contain;
+  place-items: center;
+}
+
+
+
+/* Effet hoover */
+.projet{
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+.projet.unactive{
+  opacity: 0.5;
+  /* filter: grayscale(1); */
+  z-index: -1;
+}
+.projet:hover .overlay {
+  opacity: 1; /* Afficher le texte au survol */
+}
+.overlay {
+  position: absolute; /* Pour superposer le texte sur l'image */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white; /* Couleur du texte */
+  display: flex; /* Pour centrer le texte */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  opacity: 0; /* Masquer le texte par défaut */
+  transition: opacity 0.8s ease; /* Transition pour l'apparition du texte */
+}
+.overlay-a {
+  background-color: rgb(226, 105, 81, 0.8);
+}
+.overlay-b {
+  background-color:rgb(42, 220, 77, 0.8);
+}
+.overlay-c {
+  background-color:#410871cc;
+}
+
+/*Apparition des éléments*/
+.page-projet-img, .page-projet-txt {
+  opacity: 0; /* Commence avec une opacité de 0, donc caché */
+  transition: opacity 0.8s ease-in-out; /* Transition sur l'opacité avec une durée de 1 seconde */
+}
+
+/* Lorsque la page est chargée, appliquer une opacité de 1 */
+.page-projet-img.visible, .page-projet-txt.visible {
+  opacity: 1; /* Rendre l'élément visible en augmentant l'opacité */
+}
+
+/* Applique également l'effet de fondu sur les images dans .test */
+.test img {
+  opacity: 0; /* Commence caché */
+  transition: opacity 1s ease-in-out; /* Transition pour l'animation de fondu */
+}
+
+.test img.visible {
+  opacity: 1; /* Rendre l'image visible en augmentant l'opacité */
+}

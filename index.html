@@ -1,1 +1,118 @@
-site en construction
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Lisa Dovergne</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="Logos/logolisa.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Lisa Dovergne, designer graphique.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <!-- https://jenseign.com/le-h1-logo/ -->
+    <h1><a href="index.html"><img src="Logos/logo-lisa.svg" alt="Lisa Dovergne"></a></h1>
+
+    <nav class="header-nav">
+      <a href="a-propos.html" class="fragment-mono-regular">à propos</a>
+      <a href="https://www.instagram.com/lisadovergne/" class="fragment-mono-regular">instagram</a>
+    </nav>
+  </header>
+
+  <div class="projets">
+    <a href="coffret.html" class="projet">
+      <img class="a-img" src="images/index/coffretcouv.JPG" alt="Coffret">
+      <div class="overlay overlay-a fragment-mono-regular-bold">
+        <span>Design Graphique Coffret Kid Super 2024</span>
+      </div>
+    </a>
+    <a href="collection.html" class="projet projet-xl">
+      <img src="images/index/collectioncouv.JPG" alt="Collection">
+      <div class="overlay overlay-b fragment-mono-regular-bold">
+        <span>Design Graphique Collection 2023</span>
+      </div>
+    </a>
+    <a href="magazines.html" class="projet">
+      <img src="images/index/magazinecouv.JPG" alt="Magazine">
+      <div class="overlay overlay-c fragment-mono-regular-bold">
+        <span>Typographie Magazine 2024</span>
+      </div>
+    </a>
+    <a href="specimen.html" class="projet">
+      <img src="images/index/specimencouv1.jpg" alt="Specimen">
+      <div class="overlay overlay-a fragment-mono-regular-bold">
+        <span>Typographie Specimen 2023</span>
+      </div>
+    </a>
+    <a href="affiche2.html" class="projet projet-xl">
+      <img src="images/index/workshopcouv.JPG" alt="Workshop">
+      <div class="overlay overlay-b fragment-mono-regular-bold">
+        <span> Design Graphique Affiches 2024</span>
+      </div>
+    </a>
+    <a href="jaquettes.html" class="projet">
+      <img src="images/index/le parfaimng.jpg" alt="Jaquettes">
+      <div class="overlay overlay-c fragment-mono-regular-bold">
+        <span>Typographie Jaquettes 2024 </span>
+      </div>
+    </a>
+    <a href="posters.html" class="projet projet-xl">
+      <img src="images/index/Postercouv.jpg" alt="Posters">
+      <div class="overlay overlay-a fragment-mono-regular-bold">
+        <span>Design Graphique Posters 2023 </span>
+      </div>
+    </a>
+    <a href="postertypo.html" class="projet">
+      <img src="images/index/postertypo.jpg" alt="Posters">
+      <div class="overlay overlay-b fragment-mono-regular-bold">
+        <span>Typographie Poster 2023 </span>
+      </div>
+    </a>
+    <a href="workshopPAO.html" class="projet">
+      <img src="images/index/workshoppao.jpg" alt="Posters">
+      <div class="overlay overlay-c fragment-mono-regular-bold">
+        <span>PAO Workshop 2023 </span>
+      </div>
+    </a>
+  </div>
+
+  <a href="#" class="back-to-top" title="Revenir en haut">
+    <img src="Logos/fleche-to-the-top.svg" alt="Retour en haut" width="50" height="50">
+  </a>
+
+  <script>
+    const projets = document.querySelectorAll('.projet');
+    projets.forEach(projet => {
+      projet.addEventListener('mouseover', () => {
+        projets.forEach(p => p.classList.add('unactive'));
+        projet.classList.remove('unactive');
+      });
+      projet.addEventListener('mouseout', () => {
+        projets.forEach(p => p.classList.remove('unactive'));
+      });
+    });
+
+    window.onscroll = function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (document.documentElement.scrollTop > 500) {
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+};
+
+// Fait défiler vers le haut quand on clique sur le bouton
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+  </script>
+
+</body>
+</html>

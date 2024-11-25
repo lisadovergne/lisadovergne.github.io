@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffret - Lisa Dovergne</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="Logos/logolisa.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Lisa Dovergne, projet coffret graphique.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <!-- https://jenseign.com/le-h1-logo/ -->
+    <h1><a href="index.html"><img src="Logos/logo-lisa.svg" alt="Lisa Dovergne"></a></h1>
+
+    <nav class="header-nav">
+      <a href="a-propos.html" class="fragment-mono-regular">à propos</a>
+      <a href="https://www.instagram.com/lisadovergne/" class="fragment-mono-regular">instagram</a>
+    </nav>
+  </header>
+
+    <div class= "all"> 
+    <div class="left1">
+      <img src="images/coffret/coffretouvert.JPG" alt="Coffret Ouvert" class="full-width">
+    <div class="row">
+      <img src="images/coffret/stickers.JPG" alt="Détail Stickers">
+      <img src="images/coffret/des.JPG" alt="Jeu de dés">
+      <img src="images/coffret/tshirt.JPG" alt="Tshirt KidSuper">
+    </div>
+    </div>
+    <div class="right">
+      <div class="sticky">
+      <h2 class="fragment-mono-regular-bold"> Design Graphique</h2>
+      <h3> Coffret éditorial</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit? Ipsa tempora quo expedita possimus nam doloribus quod? Provident nam veniam repellat dolorum sunt quibusdam.</p>
+      <h3>Déclinaisons</h3>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit?</p>
+    </div>
+    </div>  
+</div>
+
+<a href="#" class="back-to-top" title="Revenir en haut">
+  <img src="Logos/fleche-to-the-top.svg" alt="Retour en haut" width="50" height="50">
+</a>
+
+<script>  window.onscroll = function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (document.documentElement.scrollTop > 500) {
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+};
+
+// Fait défiler vers le haut quand on clique sur le bouton
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('load', function() {
+    // Ajouter la classe visible aux éléments souhaités pour démarrer la transition de fondu
+    document.querySelector('.page-projet-txt').classList.add('visible');
+    document.querySelector('.page-projet-img').classList.add('visible');
+    
+    // Pour les images dans .test
+    const testImages = document.querySelectorAll('.test img');
+    testImages.forEach(function(image) {
+      image.classList.add('visible');
+    });
+  });
+</script>
+
+</body>
+</html>
