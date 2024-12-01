@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffret - Lisa Dovergne</title>
+  <title>Affiches - Lisa Dovergne</title>
   <!-- favicon -->
   <link rel="icon" type="image/png" href="Logos/logolisa.png">
   <!-- meta description -->
-  <meta name="description" content="Portfolio de Lisa Dovergne, projet coffret graphique.">
+  <meta name="description" content="Portfolio de Lisa Dovergne, projet affiches iconographiques">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,20 +26,33 @@
 
     <div class= "all"> 
     <div class="left1">
-      <img src="images/coffret/coffretouvert.JPG" alt="Coffret Ouvert" class="full-width">
-    <div class="row">
-      <img src="images/coffret/stickers.JPG" alt="Détail Stickers">
-      <img src="images/coffret/des.JPG" alt="Jeu de dés">
-      <img src="images/coffret/tshirt.JPG" alt="Tshirt KidSuper">
-    </div>
+      <div class="carousel-wrapper">
+        <!-- Carrousel d‘images avec texte en dessous -->
+        <div class="carousel-container">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+          <div class="carousel">
+            <div class="slide"><img src="images/5posters/poster1.jpg" alt="Poster Bourse de Commerce"></div>
+            <div class="slide"><img src="images/5posters/Ecologie.jpg" alt="Poster Mode"></div>
+            <div class="slide"><img src="images/5posters/poster2.jpg" alt="Poster Inondation"></div>
+            <div class="slide"><img src="images/5posters/poster5.jpg" alt="Poster Tulipes"></div>
+            <div class="slide"><img src="images/5posters/poster3.jpg" alt="Poster Argent"></div>
+          </div>
+
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Texte qui change en bas de l‘image -->
+        <div class="carousel-text" id="carouselText">Texte pour l‘image 1</div>
+      </div>
     </div>
     <div class="right">
       <div class="sticky">
       <h2 class="fragment-mono-regular-bold"> Design Graphique</h2>
-      <h3> Coffret éditorial</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit? Ipsa tempora quo expedita possimus nam doloribus quod? Provident nam veniam repellat dolorum sunt quibusdam.</p>
+      <h3>Affiches iconographiques</h3>
+      <p>Ce projet d'affiches a pour but de partager des parti pris sur les thématiques de l'écologie et du marche de l'art. L'idée est de faire parler les images plutôt que le texte, qui est placé dans un second temps de lecture. </p>
       <h3>Déclinaisons</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit?</p>
+      <p>5 affiches 60x80cm.</p>
     </div>
     </div>  
 </div>
@@ -74,6 +87,32 @@ window.addEventListener('load', function() {
       image.classList.add('visible');
     });
   });
+
+  let currentIndex = 0;
+const texts = [
+              "Ouverture sur le monde",
+              "Dévoilez le tissu",
+              "La tête dans l'eau",
+              "Beauté fanée",
+              "ARgenT"
+            ];
+
+            const slides = document.querySelectorAll('.slide');
+            const textElement = document.getElementById('carouselText');
+
+            function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+              textElement.textContent = texts[index];
+            }
+
+            function changeSlide(direction) {
+              const totalSlides = slides.length;
+              currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+              showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
 </script>
 
 </body>

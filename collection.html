@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffret - Lisa Dovergne</title>
+  <title>Collection - Lisa Dovergne</title>
   <!-- favicon -->
   <link rel="icon" type="image/png" href="Logos/logolisa.png">
   <!-- meta description -->
-  <meta name="description" content="Portfolio de Lisa Dovergne, projet coffret graphique.">
+  <meta name="description" content="Portfolio de Lisa Dovergne, projet collection graphique.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,21 +25,41 @@
   </header>
 
     <div class= "all"> 
-    <div class="left1">
-      <img src="images/coffret/coffretouvert.JPG" alt="Coffret Ouvert" class="full-width">
+    <div class="left">
     <div class="row">
-      <img src="images/coffret/stickers.JPG" alt="Détail Stickers">
-      <img src="images/coffret/des.JPG" alt="Jeu de dés">
-      <img src="images/coffret/tshirt.JPG" alt="Tshirt KidSuper">
+        <!-- Carrousel d‘images avec texte en dessous -->
+        <div class="carousel-container1">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+          <div class="carousel">
+            <div class="slide"><img src="images/collection/compo1.jpg" alt="Composition 1"></div>
+            <div class="slide"><img src="images/collection/compo2.jpg" alt="Composition 2"></div>
+            <div class="slide"><img src="images/collection/compo3.jpg" alt="Composition 3"></div>
+            <div class="slide"><img src="images/collection/compo4.jpg" alt="Composition 4"></div>
+            <div class="slide"><img src="images/collection/compo5.jpg" alt="Composition 5"></div>
+            <div class="slide"><img src="images/collection/compo10.jpg" alt="Composition 6"></div>
+            <div class="slide"><img src="images/collection/compo6.jpg" alt="Composition 7"></div>
+            <div class="slide"><img src="images/collection/compo7.jpg" alt="Composition 8"></div>
+            <div class="slide"><img src="images/collection/compo8.jpg" alt="Composition 9"></div>
+            <div class="slide"><img src="images/collection/compo9.jpg" alt="Composition 10"></div>
+          </div>
+
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+      <img src="images/collection/collectionposter.JPG" alt="Poster Collection">
+      <img src="images/collection/scancouv.jpg" alt="Détail Stickers">
+      <img src="images/collection/scan2.jpg" alt="Jeu de dés">
+      <img src="images/collection/scan3.jpg" alt="Tshirt KidSuper">
+      <img src="images/collection/scan 4.jpg" alt="Tshirt KidSuper">
     </div>
     </div>
     <div class="right">
       <div class="sticky">
       <h2 class="fragment-mono-regular-bold"> Design Graphique</h2>
-      <h3> Coffret éditorial</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit? Ipsa tempora quo expedita possimus nam doloribus quod? Provident nam veniam repellat dolorum sunt quibusdam.</p>
+      <h3>Collection grpahique</h3>
+      <p>Comment créer des signes graphiques à partir d'objets du quotidien? C'est dans cette optique que j'ai réalisée cette collection d'objets monochromes, à travers laquelle j'ai réalisé des signes qui m'ont par la suite servi à créer diverses compositions. L'idée était de valoriser des objets habituellement étrangers au domaine créatif et de montrer leur potentiel graphique.</p>
       <h3>Déclinaisons</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit?</p>
+      <p>1 poster 60x80cm, 10 posters 40x60cm, 1 édition ().</p>
     </div>
     </div>  
 </div>
@@ -74,6 +94,26 @@ window.addEventListener('load', function() {
       image.classList.add('visible');
     });
   });
+  
+  let currentIndex = 0;
+
+
+            const slides = document.querySelectorAll('.slide');
+            const textElement = document.getElementById('carouselText');
+
+            function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+              textElement.textContent = texts[index];
+            }
+
+            function changeSlide(direction) {
+              const totalSlides = slides.length;
+              currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+              showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
 </script>
 
 </body>

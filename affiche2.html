@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffret - Lisa Dovergne</title>
+  <title>Affiches - Lisa Dovergne</title>
   <!-- favicon -->
   <link rel="icon" type="image/png" href="Logos/logolisa.png">
   <!-- meta description -->
-  <meta name="description" content="Portfolio de Lisa Dovergne, projet coffret graphique.">
+  <meta name="description" content="Portfolio de Lisa Dovergne, projet affiche typographiques">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,20 +26,31 @@
 
     <div class= "all"> 
     <div class="left1">
-      <img src="images/coffret/coffretouvert.JPG" alt="Coffret Ouvert" class="full-width">
-    <div class="row">
-      <img src="images/coffret/stickers.JPG" alt="Détail Stickers">
-      <img src="images/coffret/des.JPG" alt="Jeu de dés">
-      <img src="images/coffret/tshirt.JPG" alt="Tshirt KidSuper">
-    </div>
+      <div class="carousel-wrapper">
+        <!-- Carrousel d‘images avec texte en dessous -->
+        <div class="carousel-container1">
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+          <div class="carousel">
+            <div class="slide"><img src="images/affiche2/dederriere.jpg" alt="Poster De derrière"></div>
+            <div class="slide"><img src="images/affiche2/dosdelivres.jpg" alt="Poster Dos de livres"></div>
+            <div class="slide"><img src="images/affiche2/cancan.jpg" alt="Poster Cancan"></div>
+          </div>
+
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Texte qui change en bas de l‘image -->
+        <div class="carousel-text" id="carouselText">Texte pour l‘image 1</div>
+      </div>
     </div>
     <div class="right">
       <div class="sticky">
-      <h2 class="fragment-mono-regular-bold"> Design Graphique</h2>
-      <h3> Coffret éditorial</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit? Ipsa tempora quo expedita possimus nam doloribus quod? Provident nam veniam repellat dolorum sunt quibusdam.</p>
+      <h2 class="fragment-mono-regular-bold">Design Graphique</h2>
+      <h3>Bakkushan</h3>
+      <p>En japonais, signifie:«une fille jolie seulement de dos.» Traduire un mot inexistant de notre langue à travers l'expérimentation de l'affiche typographique sous la forme de 3 principes. Observer les caractères de derrière, Adopter l'écriture typographique par le biais de dos de livres, et reprendre la figure de la danseuse de French Cancan.</p>
       <h3>Déclinaisons</h3>
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci illum, labore et ad ullam reprehenderit?</p>
+      <p>3 posters 40x60cm.</p>
     </div>
     </div>  
 </div>
@@ -74,6 +85,30 @@ window.addEventListener('load', function() {
       image.classList.add('visible');
     });
   });
+
+  let currentIndex = 0;
+const texts = [
+              "De derrière",
+              "Dos de livres",
+              "Cancan"
+            ];
+
+            const slides = document.querySelectorAll('.slide');
+            const textElement = document.getElementById('carouselText');
+
+            function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+              textElement.textContent = texts[index];
+            }
+
+            function changeSlide(direction) {
+              const totalSlides = slides.length;
+              currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+              showSlide(currentIndex);
+            }
+
+            showSlide(currentIndex);
 </script>
 
 </body>

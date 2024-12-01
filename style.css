@@ -173,52 +173,32 @@ figure{
   font-family: "Fragment Mono", monospace;
 }
 
-.left1 {
+.left {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
 }
-
-.left1 .full-width {
-  width: 100%; /* Première image sur toute la largeur */
-  height: auto;
-}
-
-.left1 .row {
-  display: grid; /* Utilisation de Grid pour la deuxième ligne */
-  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
-  gap: 20px;
-}
-
-.left1 .row img {
-  width: 100%;  /* Les images prennent toute la largeur de leur cellule */
+.left img {
+  width: 100%; /* Les images prennent toute la largeur de leur conteneur */
   height: auto; /* Maintient les proportions */
+  justify-self: center; /* Centre horizontalement dans la cellule */
+  align-self: center; /* Centre verticalement dans la cellule */
 }
 
-
-
-
-.left2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-.left2 .full-width {
+.left .full-width {
   width: 100%; /* Première image sur toute la largeur */
   height: auto;
 }
 
-.left2 .row {
+.left .row {
   display: grid; /* Utilisation de Grid pour la deuxième ligne */
   grid-template-columns: repeat(2, 1fr); /* Trois colonnes égales */
   gap: 20px;
-  
 }
 
-.left2 .row img {
-  width: 100%;  /* Les images prennent toute la largeur de leur cellule */
-  height: 100%;
+.left .row img {
+  width: auto;  /* Les images prennent toute la largeur de leur cellule */
+  height: 100%; /* Maintient les proportions */
 }
 
 
@@ -280,13 +260,88 @@ figure{
 .page-projet-img.visible, .page-projet-txt.visible {
   opacity: 1; /* Rendre l'élément visible en augmentant l'opacité */
 }
-
-/* Applique également l'effet de fondu sur les images dans .test */
-.test img {
-  opacity: 0; /* Commence caché */
-  transition: opacity 1s ease-in-out; /* Transition pour l'animation de fondu */
+.video-container {
+  width: 100%;  /* La cellule occupe toute la largeur de son conteneur parent */
+  height: 100%; /* La cellule occupe toute la hauteur de son conteneur parent */
+  position: relative; /* Pour pouvoir contrôler la taille de la vidéo à l'intérieur */
+  overflow: hidden;  /* Cache tout dépassement */
+  margin-right: 20px;
 }
 
-.test img.visible {
-  opacity: 1; /* Rendre l'image visible en augmentant l'opacité */
+.video-container video {
+  object-fit: cover;  /* Assure que la vidéo couvre toute la cellule, tout en maintenant l'aspect ratio */
+  width: 100%;        /* La vidéo occupe toute la largeur de la cellule */
+  height: 100%;       /* La vidéo occupe toute la hauteur de la cellule */
+  object-position: center;  /* Centre la vidéo dans la cellule */
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column; /* Mettre en colonne pour que le texte soit en dessous /
+  align-items: center;
+  gap: 10px; / Espace entre le texte et le carrousel */
+}
+
+.slide {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-text {
+  font-size: 100%;
+  font-family: "Fragment Mono", monospace;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 85%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-container img {
+  width: 79%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-container1 {
+  position: relative;
+  width: 85%;
+  max-width: 100%;
+  margin-left: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.carousel-container1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-wrapper1 {
+  display: flex;
+ /* Mettre en colonne pour que le texte soit en dessous /
+  align-items: center;
+  gap: 10px; / Espace entre le texte et le carrousel */
+}
+
+.left1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 60px;
+  justify-items: center;
+  justify-content: center;
 }
