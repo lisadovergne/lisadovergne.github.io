@@ -381,7 +381,7 @@ figure{
 
   /* Si tu veux que le texte de la section .right soit centré sur mobile */
   .right h2, .right h3, .right p {
-    text-align: center;
+    text-align:left;
   }
 
   /* Empêcher les images d'occuper trop d'espace en hauteur */
