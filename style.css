@@ -326,7 +326,7 @@ figure{
 }
 
 .carousel-container1 img {
-  width: 100%;
+  width: 60%;
   height: auto;
   object-fit: cover;
 }
@@ -345,3 +345,107 @@ figure{
   justify-items: center;
   justify-content: center;
 }
+
+
+/* Media Query pour les petits écrans (smartphones) */
+@media screen and (max-width: 768px) {
+  .all {
+    display: grid;
+    grid-template-columns: 1fr;  /* Une seule colonne, donc "left" en-dessous de "right" */
+    gap: 20px;  /* Espace entre les éléments */
+  }
+
+  .left {
+    width: 100%;  /* La div 'left' prend toute la largeur */
+    padding: 0;
+  }
+
+  .right {
+    width: 100%;  /* La div 'right' prend toute la largeur */
+    padding: 0;
+    position: relative;
+    top: auto; /* Retirer le positionnement sticky pour éviter le défilement indésirable */
+  }
+
+  /* Images dans .left : ajuster la taille des images */
+  .left img {
+    width: 100%;
+    height: auto;  /* Maintient le ratio d'image */
+  }
+
+  /* Pour les images de la rangée dans .left */
+  .left .row img {
+    width: 100%;  /* Les images de la ligne prennent toute la largeur de la cellule */
+    height: auto;
+  }
+
+  /* Si tu veux que le texte de la section .right soit centré sur mobile */
+  .right h2, .right h3, .right p {
+    text-align: center;
+  }
+
+  /* Empêcher les images d'occuper trop d'espace en hauteur */
+  .left .full-width {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Assurer que l'overlay fonctionne même sur les petits écrans */
+  .projet {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  .projets {
+    display: grid; /* Utiliser une grille à une seule colonne sur les petits écrans */
+    grid-template-columns: 1fr; /* Une seule colonne */
+    gap: 20px;  /* Espacement entre les éléments */
+    margin: 0;  /* Retirer toute marge par défaut */
+  }
+
+  .projet {
+    width: 100%;  /* S'assurer que chaque projet prend toute la largeur du parent */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Pour s'assurer que les images des projets sont bien responsives */
+  .projet img {
+    width: 100%;  /* Les images prennent toute la largeur de leur conteneur */
+    height: auto;  /* Maintient les proportions des images */
+  }
+
+  /* Les overlays des projets doivent aussi être responsives */
+  .overlay {
+    padding: 10px;  /* Ajouter un peu d'espace autour du texte */
+    font-size: 16px; /* Réduire la taille de la police pour les petits écrans */
+  }
+
+  /* Adaptation de la taille du texte dans les projets */
+  .overlay span {
+    font-size: 14px; /* Réduire la taille du texte */
+  }
+
+  .header-nav {
+    display: grid;
+    grid-template-columns: 1fr;  /* Une seule colonne pour la navigation sur mobile */
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .header-nav a {
+    font-size: 16px; /* Ajuster la taille de la police pour les petits écrans */
+  }
+
+  .back-to-top {
+    bottom: 10px; /* Réduire la distance du bouton par rapport au bas de l'écran */
+    right: 10px;  /* Réduire la distance du bouton par rapport à la droite de l'écran */
+  }
+
+  .back-to-top img {
+    width: 40px;  /* Réduire la taille de l'icône */
+    height: 40px;
+  }
+}
+
