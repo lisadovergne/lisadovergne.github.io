@@ -261,7 +261,7 @@ figure{
   transition: opacity 0.8s ease; /* Transition pour l'apparition du texte */
 }
 .overlay-a {
-  background-color: rgb(226, 105, 81, 0.8);
+  background-color: #e26951cc;
 }
 .overlay-b {
   background-color:rgb(42, 220, 77, 0.8);
@@ -472,6 +472,173 @@ figure{
 .a-propos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 100px;
   padding: 20px;
+}
+
+.margin {
+  margin-top: -20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center; /* Centre la div horizontalement */
+  align-items: center; /* Centre la div verticalement */
+  height: 75px; /* Hauteur du footer */
+  font-family: "authentic-sans-60", monospace;
+}
+
+.footer-content {
+  text-align: center; /* Centre le texte à l'intérieur de la div */
+}
+
+.footer-content a {
+  color: #e26951cc; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+
+
+.a-propos a {
+  color: #e26951cc; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+.contact h2 {
+  margin-bottom: 0; /* Pour éliminer toute marge sous le h2 */
+  padding-bottom: 0; /* Assure qu'il n'y a pas de padding en bas */
+}
+
+.contact a {
+  color: #e26951cc; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  margin-top: -20px; /* Appliquer le même margin-top */
+  display: block; /* Permet à l'élément de se comporter comme un bloc */
+}
+
+.p{
+  font-size: 16px;
+}
+
+.separator {
+  height: 1px; /* Hauteur du filet */
+  background-color: #000000cc; /* Couleur du filet */
+  margin: 0; /* Supprime l'espace au-dessus et au-dessous */
+  margin-top: 50px;
+  margin-left: 50px; /* Marge à gauche */
+  margin-right: 50px; /* Marge à droite */
+  margin-bottom: 10px;
+}
+
+.separator1 {
+  height: 1px; /* Hauteur du filet */
+  background-color: #000000cc; /* Couleur du filet */
+  margin: 0; /* Supprime l'espace au-dessus et au-dessous */
+  margin-top: 120px;
+  margin-left: 50px; /* Marge à gauche */
+  margin-right: 50px; /* Marge à droite */
+  margin-bottom: 10px;
+}
+
+/* Media Query pour les petits écrans (smartphones) */
+@media screen and (max-width: 768px) {
+
+  /* A propos */
+  .a-propos {
+    display: block; /* Afficher les sections les unes après les autres */
+    padding: 20px;
+  }
+
+  /* La div sticky pour l'annonce */
+  .sticky {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  /* Annonce */
+  .annonce {
+    font-size: 18px; /* Réduire la taille de la police pour mieux s'adapter sur mobile */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Espacement entre annonce et description */
+  }
+
+  /* Description */
+  .description {
+    font-size: 16px; /* Adapter la taille du texte */
+    text-align: justify; /* Justifier le texte pour une meilleure lecture sur mobile */
+    margin-bottom: 20px; /* Espacement entre description et contact */
+  }
+
+  /* Contact */
+  .contact {
+    font-size: 16px; /* Adapter la taille du texte */
+    text-align: center; /* Centrer les éléments du contact */
+  }
+
+  /* Liens dans Contact */
+  .contact a {
+    color: #e26951cc;
+    text-decoration: none;
+  }
+
+  .contact h2 {
+    margin-bottom: 10px;
+  }
+
+  .contact h3 {
+    margin-top: 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 10px 0; /* Ajouter un peu de padding pour les petits écrans */
+    font-size: 14px; /* Réduire la taille de la police */
+  }
+
+  .footer-content {
+    text-align: center; /* Centrer le contenu du footer */
+    width: 100%;
+  }
+
+  .footer-content a {
+    color: #e26951cc;
+    text-decoration: none;
+  }
+
+  /* Header - navigation sur mobile */
+  .header-nav {
+    display: grid;
+    grid-template-columns: 1fr;  /* Une seule colonne pour la navigation */
+    gap: 10px;
+    justify-items: center;
+    margin-top: 10px; /* Espacement au-dessus de la navigation */
+  }
+
+  .header-nav a {
+    font-size: 16px; /* Ajuster la taille de la police */
+  }
+
+  /* Back to top button */
+  .back-to-top {
+    bottom: 10px; /* Réduire la distance du bouton par rapport au bas de l'écran */
+    right: 10px;  /* Réduire la distance du bouton par rapport à la droite de l'écran */
+  }
+
+  .back-to-top img {
+    width: 40px;  /* Réduire la taille de l'icône */
+    height: 40px;
+  }
+
+  /* Séparateurs */
+  .separator, .separator1 {
+    margin-left: 0; /* Pour retirer les marges à gauche et à droite sur mobile */
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  /* Eviter que les images de la section .left dépassent */
+  .left img {
+    width: 100%; /* Les images prennent toute la largeur de leur conteneur */
+    height: auto; /* Maintient les proportions */
+  }
 }
