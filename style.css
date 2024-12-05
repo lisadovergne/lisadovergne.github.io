@@ -33,7 +33,7 @@ text {
 }
 
 .annonce{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   font-family: "authentic-sans-60", monospace;
 }
@@ -528,7 +528,7 @@ header h1 img {
     margin: 10px; /* Ajouter un peu de marge */
   }
 
-  .annonce {
+  .both {
     width: 100%;  /* La div 'left' prend toute la largeur */
     padding: 0;
   }
