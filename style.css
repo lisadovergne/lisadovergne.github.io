@@ -480,6 +480,7 @@ header h1 img {
 
     header h1 img {
       width: 60px;
+      height: auto;
     }
   
     header-nav a {
@@ -487,10 +488,10 @@ header h1 img {
       display: block;
       margin: 10px 0;
     }
-      /* Réorganiser les éléments en colonne sur petits écrans */
+    
       .a-propos {
-        display: flex;
-        flex-direction: column; /* Les éléments sont empilés en colonne */
+        display: grid;
+        grid-template-columns: 1fr; /* Les éléments sont empilés en colonne */
         gap: 20px; /* Espacement entre les sections */
       }
     
@@ -517,6 +518,7 @@ header h1 img {
       /* Réduire l'image du logo dans l'en-tête */
       header h1 img {
         width: 60px;
+        height: auto;
       }
 
       .footer-content {
@@ -529,6 +531,16 @@ header h1 img {
         width: 40px;
         height: 40px;
       }
+
+        .indexstage {
+          padding: 10px; /* Moins de padding sur smartphone */
+        }
+      
+        .scrolling-text {
+          font-size: 30px; /* Réduire la taille du texte */
+          animation: scroll-left 8s linear infinite; /* Accélérer un peu l'animation sur petit écran */
+        }
+      
     }
 
 .a-propos {
