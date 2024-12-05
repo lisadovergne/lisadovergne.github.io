@@ -77,6 +77,12 @@ figure{
   animation: boing 1.5s infinite; /* pour animer le logo en survole */
 }
 
+/* Réduction de la taille du logo sur mobile */
+header h1 img {
+  max-width: 150px; /* Taille réduite du logo */
+  height: auto;
+}
+
 @keyframes boing {
   0% { transform: scale(0.9); }
   30% { transform: scale(1.1); }
@@ -473,7 +479,7 @@ figure{
   }
 
     header h1 img {
-      width: 120px;
+      width: 60px;
     }
   
     header-nav a {
@@ -481,7 +487,6 @@ figure{
       display: block;
       margin: 10px 0;
     }
-    @media (max-width: 768px) {
       /* Réorganiser les éléments en colonne sur petits écrans */
       .a-propos {
         display: flex;
@@ -511,11 +516,7 @@ figure{
     
       /* Réduire l'image du logo dans l'en-tête */
       header h1 img {
-        width: 120px;
-      }
-    
-      footer.special {
-        font-size: 0.8em;
+        width: 60px;
       }
 
       .footer-content {
@@ -529,13 +530,13 @@ figure{
         height: 40px;
       }
     }
-}
 
 .a-propos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
   padding: 20px;
+  margin-bottom: 120px;
 }
 
 .margin {
@@ -595,15 +596,6 @@ a {
   margin-bottom: 10px;
 }
 
-.separator1 {
-  height: 1px; /* Hauteur du filet */
-  background-color: #25173b; /* Couleur du filet */
-  margin: 0; /* Supprime l'espace au-dessus et au-dessous */
-  margin-top: 120px;
-  margin-left: 50px; /* Marge à gauche */
-  margin-right: 50px; /* Marge à droite */
-  margin-bottom: 10px;
-}
 
 .indexstage {
   display: grid;
