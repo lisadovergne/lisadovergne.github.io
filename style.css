@@ -467,6 +467,52 @@ figure{
     width: 40px;  /* Réduire la taille de l'icône */
     height: 40px;
   }
+
+    header h1 img {
+      width: 120px;
+    }
+  
+    header-nav a {
+      font-size: 1em;
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .a-propos {
+      padding: 15px;
+    }
+  
+    .sticky {
+      padding: 10px;
+    }
+  
+    .annonce h1 {
+      font-size: 1.4em;
+    }
+  
+    .description p {
+      font-size: 0.95em;
+    }
+  
+    .contact h2 {
+      font-size: 1.2em;
+    }
+  
+    .contact h3 {
+      font-size: 1.1em;
+    }
+  
+    .contact .margin {
+      font-size: 0.9em;
+    }
+  
+    .separator1 {
+      margin: 20px 0;
+    }
+  
+    footer.special {
+      font-size: 0.8em;
+    }
 }
 
 .a-propos {
@@ -538,107 +584,4 @@ footer {
   margin-left: 50px; /* Marge à gauche */
   margin-right: 50px; /* Marge à droite */
   margin-bottom: 10px;
-}
-
-/* Media Query pour les petits écrans (smartphones) */
-@media screen and (max-width: 768px) {
-
-  /* A propos */
-  .a-propos {
-    display: block; /* Afficher les sections les unes après les autres */
-    padding: 20px;
-  }
-
-  /* La div sticky pour l'annonce */
-  .sticky {
-    position: relative;
-    margin-bottom: 20px;
-  }
-
-  /* Annonce */
-  .annonce {
-    font-size: 18px; /* Réduire la taille de la police pour mieux s'adapter sur mobile */
-    text-align: center; /* Centrer le texte */
-    margin-bottom: 20px; /* Espacement entre annonce et description */
-  }
-
-  /* Description */
-  .description {
-    font-size: 16px; /* Adapter la taille du texte */
-    text-align: justify; /* Justifier le texte pour une meilleure lecture sur mobile */
-    margin-bottom: 20px; /* Espacement entre description et contact */
-  }
-
-  /* Contact */
-  .contact {
-    font-size: 16px; /* Adapter la taille du texte */
-    text-align: center; /* Centrer les éléments du contact */
-  }
-
-  /* Liens dans Contact */
-  .contact a {
-    color: #e26951cc;
-    text-decoration: none;
-  }
-
-  .contact h2 {
-    margin-bottom: 10px;
-  }
-
-  .contact h3 {
-    margin-top: 10px;
-  }
-
-  /* Footer */
-  footer {
-    padding: 10px 0; /* Ajouter un peu de padding pour les petits écrans */
-    font-size: 14px; /* Réduire la taille de la police */
-  }
-
-  .footer-content {
-    text-align: center; /* Centrer le contenu du footer */
-    width: 100%;
-  }
-
-  .footer-content a {
-    color: #e26951cc;
-    text-decoration: none;
-  }
-
-  /* Header - navigation sur mobile */
-  .header-nav {
-    display: grid;
-    grid-template-columns: 1fr;  /* Une seule colonne pour la navigation */
-    gap: 10px;
-    justify-items: center;
-    margin-top: 10px; /* Espacement au-dessus de la navigation */
-  }
-
-  .header-nav a {
-    font-size: 16px; /* Ajuster la taille de la police */
-  }
-
-  /* Back to top button */
-  .back-to-top {
-    bottom: 10px; /* Réduire la distance du bouton par rapport au bas de l'écran */
-    right: 10px;  /* Réduire la distance du bouton par rapport à la droite de l'écran */
-  }
-
-  .back-to-top img {
-    width: 40px;  /* Réduire la taille de l'icône */
-    height: 40px;
-  }
-
-  /* Séparateurs */
-  .separator, .separator1 {
-    margin-left: 0; /* Pour retirer les marges à gauche et à droite sur mobile */
-    margin-right: 0;
-    margin-top: 20px;
-  }
-
-  /* Eviter que les images de la section .left dépassent */
-  .left img {
-    width: 100%; /* Les images prennent toute la largeur de leur conteneur */
-    height: auto; /* Maintient les proportions */
-  }
 }
