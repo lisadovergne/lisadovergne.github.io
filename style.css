@@ -477,41 +477,49 @@ figure{
       display: block;
       margin: 10px 0;
     }
-  
-    .a-propos {
-      padding: 15px;
-    }
-  
-    .sticky {
-      padding: 10px;
-    }
-  
-    .annonce h1 {
-      font-size: 1.4em;
-    }
-  
-    .description p {
-      font-size: 0.95em;
-    }
-  
-    .contact h2 {
-      font-size: 1.2em;
-    }
-  
-    .contact h3 {
-      font-size: 1.1em;
-    }
-  
-    .contact .margin {
-      font-size: 0.9em;
-    }
-  
-    .separator1 {
-      margin: 20px 0;
-    }
-  
-    footer.special {
-      font-size: 0.8em;
+    @media (max-width: 768px) {
+      /* Réorganiser les éléments en colonne sur petits écrans */
+      .a-propos {
+        display: flex;
+        flex-direction: column; /* Les éléments sont empilés en colonne */
+        gap: 20px; /* Espacement entre les sections */
+      }
+    
+      .annonce h1 {
+        font-size: 1.4em;
+      }
+    
+      .description p {
+        font-size: 0.95em;
+      }
+    
+      .contact h2 {
+        font-size: 1.2em;
+      }
+    
+      .contact h3 {
+        font-size: 1.1em;
+      }
+    
+      .contact .margin {
+        font-size: 0.9em;
+      }
+    
+      /* Réduire l'image du logo dans l'en-tête */
+      header h1 img {
+        width: 120px;
+      }
+    
+      footer.special {
+        font-size: 0.8em;
+      }
+    
+      .back-to-top {
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+      }
     }
 }
 
