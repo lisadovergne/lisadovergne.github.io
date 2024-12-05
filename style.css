@@ -537,10 +537,15 @@ header h1 img {
     width: 100%;  /* La div 'left' prend toute la largeur */
     padding: 0;
   }
+
+  .annonce {
+    font-size: 12px; /* Ajuster la taille de la police pour les petits écrans */
+  }
       
   .contact {
     width: 100%;  /* La div 'right' prend toute la largeur */
     padding: 0;
+    gap : 20px;
     position: relative;
     top: auto; /* Retirer le positionnement sticky pour éviter le défilement indésirable */
   }
