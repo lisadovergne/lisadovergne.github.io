@@ -502,13 +502,18 @@ header h1 img {
     height: 40px;
   }
 
-  .indexstage {
-    padding: 10px; /* Moins de padding sur smartphone */
-  }
-      
   .scrolling-text {
-    font-size: 16px; /* Réduire la taille du texte */
-    animation: scroll-left 5s linear infinite; /* Accélérer un peu l'animation sur petit écran */
+    animation: scroll-left-mobile 10s linear infinite; /* Animation spécifique sur mobile */
+    font-size: 20px;  /* Ajuster la taille du texte pour les petits écrans */
+  }
+
+  @keyframes scroll-left-mobile {
+    0% {
+      transform: translateX(0); /* Commence directement à gauche */
+    }
+    100% {
+      transform: translateX(-100%); /* Défile jusqu'à la gauche */
+    }
   }
   
   .separator {
