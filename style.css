@@ -184,6 +184,16 @@ header h1 img {
   overflow: visible; /* Pour éviter que le contenu soit coupé */
 }
 
+.all1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Deux colonnes (left et right) */
+  gap: 18px;
+  padding: 18px;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: visible; /* Pour éviter que le contenu soit coupé */
+}
+
 .right{
   font-family: "authentic-sans-60", monospace;
   max-width: 480px;
@@ -390,6 +400,12 @@ header h1 img {
   .all {
     display: grid;
     grid-template-columns: 1fr;  /* Une seule colonne, donc "left" en-dessous de "right" */
+    gap: 20px;  /* Espace entre les éléments */
+  }
+
+  .all1 {
+    display: grid;
+    grid-template-columns: 1fr !important;  /* Une seule colonne, donc "left" en-dessous de "right" */
     gap: 20px;  /* Espace entre les éléments */
   }
 
