@@ -231,6 +231,16 @@ header h1 img {
   height: 100%; /* Maintient les proportions */
 }
 
+.left .row1 {
+  display: grid; /* Utilisation de Grid pour la deuxième ligne */
+  grid-template-columns: repeat(2, 1fr); /* Trois colonnes égales */
+  gap: 20px;
+}
+
+.left .row1 img {
+  width: auto;  /* Les images prennent toute la largeur de leur cellule */
+  height: 100%; /* Maintient les proportions */
+}
 
 
 
@@ -400,6 +410,14 @@ header h1 img {
     width: 100%;
     height: auto;  /* Maintient le ratio d'image */
   }
+
+  
+.left .row1 {
+  display: grid; /* Utilisation de Grid pour la deuxième ligne */
+  grid-template-columns: 1fr !important; /* Trois colonnes égales */
+  gap: 10px;
+}
+
 
   /* Pour les images de la rangée dans .left */
   .left .row img {
