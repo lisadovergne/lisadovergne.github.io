@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+  <title>portfolio</title>
+  <style>
+    /* box sizing */
+    *{
+      box-sizing: border-box;
+    }
+
+    :root {
+      overscroll-behavior: none;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+    }
+
+
+    body{
+      padding: 0;
+      font-family: 'arial', sans-serif;
+    }
+    
+    .projets{
+      overflow: hidden;
+      width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 0;
+      /* display: grid;
+      grid-template-columns: repeat(auto-fill, 200px);
+      gap:24px; */
+    }
+
+    .projet{
+      position: absolute;
+      /* top:-50px;
+      left: -50px; */
+      width:110px;
+      height:auto;
+      cursor: pointer;
+      /* overflow:hidden;
+      height:10px;
+      border-radius: 5px;
+      background: #f00; */
+    }
+
+    .projet h1, .projet p{
+      display: none;
+    }
+
+ .projets h1{
+      position: absolute;
+      top: 50px;
+      left: 60px;
+      width: 100%;
+      font-size: 72px;
+      color: white;
+      font-family: "Chelsea Market", system-ui;
+    }
+
+ .projets h2 {
+      position: absolute;
+      top: 620px;
+      bottom: 100px;
+      left: 150px;
+      font-size: 32px;
+      color: white;
+      font-family: "Chelsea Market", system-ui;
+    }
+
+    .projets h3 {
+      position: absolute;
+      top :200px;
+      left: 400px;
+      font-size: 18px;
+      color: white;
+      font-family: "Chelsea Market", system-ui;
+    }
+
+    .wrap h1{
+      font-family: "Chelsea Market", system-ui;
+    }
+
+    .chelsea-market-regular {
+  font-family: "Chelsea Market", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    img{
+      width: 120%;
+      height: auto;
+    }
+    .fixed{
+      position: fixed;
+    }
+    .projets.fixed{
+      top:100px;
+    }
+    .overlay{
+      position: absolute;
+      width: 100%;
+      min-height: 100vh;
+      z-index: 9999;
+      background: linear-gradient(90deg, #00bfff, #00aae4, #ff8f00, #ff6700, #fe28a2, #e0218a);
+      padding: 48px;
+      top: 0;
+      left:0; 
+   
+    }
+    .close{
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 48px;
+      color: #fe28a2;
+      cursor: pointer;
+      font-size: 48px;
+      background: #000;
+      border-radius: 24px;
+    }
+    body {
+      background: linear-gradient(90deg, #00bfff, #00aae4, #ff8f00, #ff6700, #fe28a2, #e0218a);
+      background-size: 300% 300%;
+      animation: rainbow 10s infinite;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .wrap{
+      width:100%;
+    }
+
+    .fiche{
+      margin: 0px auto;
+      max-width: 640px;
+      background: #fff;
+      padding: 0 20px 20px;  
+    }
+
+    .fiche img{
+      margin:0 -20px 20px;
+      width: calc(100% + 40px);
+    }
+
+    
+
+/*draggable titre */
+
+    .flair--4b {
+       background-image:url(https://assets.codepen.io/16327/ui-flair-4.png);
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1></h1>
+  </header>
+  <div class="projets">
+   <div class="wrapper">
+    <h1>Lisa Dovergne</h1>
+    <h2>portfolio 2023-2025</h2>
+    <h3>&#8593; déplace-moi ! &#8593;</h3>
+  </div>
+  </div>
+
+  <!-- gsap -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+  <!-- motionPath -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap/dist/MotionPathPlugin.min.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
