@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride To Happiness - Lisa Dovergne</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="Logos/logolisa.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Lisa Dovergne, Ride To Happiness.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <!-- https://jenseign.com/le-h1-logo/ -->
+    <h1><a href="index.html"><img src="Logos/logo-lisa.svg" alt="Lisa Dovergne"></a></h1>
+
+    <nav class="header-nav">
+      <a href="a-propos.html" class="authentic-sans-60">à propos</a>
+       
+    </nav>
+  </header>
+
+    <div class= "all"> 
+    <div class="left">
+    <div class="row">
+      <img src="images/rth/voltron.jpg" alt="Affiche Voltron">
+      <img src="images/rth/oziris.jpg" alt="Affiche Oziris">
+      <img src="images/rth/shambhala.jpg" alt="Affiche Shambhala">
+      <img src="images/rth/photoshambhala.jpg" alt="Photographie Shambhala">
+      <img src="images/rth/phototaron.jpg" alt="Photographie Taron">
+      <img src="images/rth/photowoodan.jpg" alt="Photographie Woodan">
+      <img src="images/rth/photoeau.jpg" alt="Photographie Eau">
+      <img src="images/rth/photooziris.jpg" alt="Photographie Oziris">
+      <img src="images/rth/photofly.jpg" alt="Photographie Fly">
+      <img src="images/rth/photodragon.jpg" alt="Photographie Dragon Khan">
+    </div>
+    </div>
+    <div class="right">
+      <div class="sticky">
+      <h2 class="authentic-sans-60">Design Graphique</h2>
+      <h3>Ride To Happiness</h3>
+      <p> Ce projet chérie la passion que je nourris pour les parcs d'attractions. Il est question ici de transmettre ma propre vision de la chose à travers des objets de dialogues communicant une approche à la fois graphique et textuelle. Pour cela, je présente cette passion à travers deux spectres : Un temps introspectif,intense et passionnel, comme des lettres d'amour à un bien aimé. Puis un temps plus léger, plus spontané, où j'affirme ma passion simplement pour plaisir de créer avec ce que j'aime. A travers les affiches, je développe un système de présentation d'une attraction à sensations fortes par affiche. Chaque manège possède sa propre identité et esthétique, mais aussi ses différentes caractéristiques techniques traduides ici par des symboles. L'édition elle, fait co-exister à la fois la pensée et la photographie. Les textes, à la fois introspectifs, sensibles mais aussi spontanées et descriptifs ont pour but de communiquer ma passion de la manière la plus authentiques possible.</p>
+      <h3>Déclinaisons</h3>
+      <p>3 affiches et 1 édition.</p>
+    </div>
+    </div>  
+</div>
+
+<a href="#" class="back-to-top" title="Revenir en haut">
+  <img src="Logos/fleche-to-the-top.svg" alt="Retour en haut" width="50" height="50">
+</a>
+
+<div class="separator"></div>
+  <footer>
+    <div class="footer-content">
+      <p>© Lisa Dovergne, août 2025. Typographie&nbsp;: <a href="https://authentic.website/shop.html#sans">Authentic</a> de Christina Janus et Desmond Wang.</p>
+    </div>
+  </footer>
+  
+<script>  window.onscroll = function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (document.documentElement.scrollTop > 500) {
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+};
+
+// Fait défiler vers le haut quand on clique sur le bouton
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('load', function() {
+    // Ajouter la classe visible aux éléments souhaités pour démarrer la transition de fondu
+    document.querySelector('.page-projet-txt').classList.add('visible');
+    document.querySelector('.page-projet-img').classList.add('visible');
+    
+    // Pour les images dans .test
+    const testImages = document.querySelectorAll('.test img');
+    testImages.forEach(function(image) {
+      image.classList.add('visible');
+    });
+  });
+</script>
+
+</body>
+</html>

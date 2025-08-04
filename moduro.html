@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moduro - Lisa Dovergne</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="Logos/logolisa.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Lisa Dovergne, Projet Moduro.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <!-- https://jenseign.com/le-h1-logo/ -->
+    <h1><a href="index.html"><img src="Logos/logo-lisa.svg" alt="Lisa Dovergne"></a></h1>
+
+    <nav class="header-nav">
+      <a href="a-propos.html" class="authentic-sans-60">à propos</a>
+       
+    </nav>
+  </header>
+
+    <div class= "all"> 
+    <div class="left"> 
+        <img src="images/moduro/moduro.jpg" alt="Typo Titre" class="full-width">
+        <img src="images/moduro/modules.jpg" alt="Moduro Présentation Modules">
+    <div class="row">
+      <img src="images/moduro/mot1.jpg" alt="Moduro Présentation Mot 1">
+      <img src="images/moduro/mot2.jpg" alt="Moduro Présentation Mot 2">
+      <img src="images/moduro/scan1.jpg" alt="Moduro Présentation Scan 1">
+      <img src="images/moduro/scan2.jpg" alt="Moduro Présentation Scan 2">
+      <img src="images/moduro/alphabet.jpg" alt="Moduro Présentation Alphabet">
+      <img src="images/moduro/tamponstest.jpg" alt="Moduro Présentation Tampons Test">
+    </div>
+
+    </div>
+    <div class="right">
+      <div class="sticky">
+      <h2 class="authentic-sans-60">Typographie</h2>
+      <h3>Moduro</h3>
+      <p>La typographie d’origine est la Black Boton, dessinée par Albert Boton, typographe et graphiste français. Les points forts de cette typo sont son impact visuel fort par sa graisse ainsi que des formes marquées par des angles et des courbes affirmées. Notre ré-interprétation se nomme la Moduro, fusion de “module” et de “maduro”, un type de cigare faisant référence à Albert Boton, qui en était amateur. Moduro est une typographie utilisée pour le titrage, aussi bien pour l’affiche, l’éditorial et autres. Ainsi, comme son nom l’indique, nous avons rendu hommage à cette typographie en restant proche de l’original tout en lui apportant une version modulaire. Notre vision insiste sur un goût pour la géométrie, mais aussi des jeux de construction, de composition et de superpositions à travers les différents caractères. À travers ces modules, l’enjeu est de trouver un équilibre entre un nombre réduit de modules différents et une clarté/créativité des caractères. Afin de mettre en avant sa qualité modulaire, celle-ci se dessine / s’écrit par le biais de tampons, qui chacun représente un module du catalogue. A ce système s’accompagne un spécimen sous forme de mode d’emploi, afin que chacun puisse acquérir l'apprentissage du dessin des caractères de Moduro. Ainsi, c’est ici un système d’écriture ouvert à tous, typographes ou bien des personnes pour qui le domaine du graphisme et de la typographie est un monde inconnu. Dans l’idéal, un atelier en groupe serait réalisé afin de mettre en situation tout notre système (tampons et spécimens) pour voir se déployer notre typographie, mais aussi la voir se décliner selon la créativité de chacun. Ce projet à été réalisé en collaboration avec <a href="https://maylisgau.github.io/">Maylis Gau.</a></p>
+      <h3>Déclinaisons</h3>
+      <p>6 éditions (spécimen technique, majuscules, minuscules, ponctuation&accents, références) et 7 tampons.</p>
+    </div>
+    </div>  
+</div>
+
+<a href="#" class="back-to-top" title="Revenir en haut">
+  <img src="Logos/fleche-to-the-top.svg" alt="Retour en haut" width="50" height="50">
+</a>
+
+<div class="separator"></div>
+  <footer>
+    <div class="footer-content">
+      <p>© Lisa Dovergne, décembre 2024. Typographie&nbsp;: <a href="https://authentic.website/shop.html#sans">Authentic</a> de Christina Janus et Desmond Wang.</p>
+    </div>
+  </footer>
+  
+<script>  window.onscroll = function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (document.documentElement.scrollTop > 500) {
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+};
+
+// Fait défiler vers le haut quand on clique sur le bouton
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('load', function() {
+    // Ajouter la classe visible aux éléments souhaités pour démarrer la transition de fondu
+    document.querySelector('.page-projet-txt').classList.add('visible');
+    document.querySelector('.page-projet-img').classList.add('visible');
+    
+    // Pour les images dans .test
+    const testImages = document.querySelectorAll('.test img');
+    testImages.forEach(function(image) {
+      image.classList.add('visible');
+    });
+  });
+</script>
+
+</body>
+</html>
